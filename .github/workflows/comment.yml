@@ -22,7 +22,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          msg: "Msg/${{github.sha}}"
+          msg: "wat Msg/${{github.sha}}"
 
   # This workflow contains a single job called "build"
   build:
