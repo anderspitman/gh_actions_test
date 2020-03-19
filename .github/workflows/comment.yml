@@ -24,6 +24,17 @@ jobs:
         with:
           msg: "wat Msg/${{github.sha}}"
 
+  comment2:
+    name: sample comment
+    runs-on: ubuntu-latest
+    steps:
+      - name: comment PR
+        uses: unsplash/comment-on-pr@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          msg: "wat Msg/$GITHUB_SHA"
+
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
