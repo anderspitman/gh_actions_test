@@ -13,6 +13,13 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
 
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run a one-line script
+    - uses: actions/checkout@${{github.event.pull_request.head.sha}}
+      run: echo Hello, world!
+
   example:
     name: sample comment
     runs-on: ubuntu-latest
