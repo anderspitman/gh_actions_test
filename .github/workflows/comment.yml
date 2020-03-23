@@ -22,7 +22,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          msg: "wat Msg/${{github.sha}}"
+          msg: "wat Msg/${{github.event.pull_request.head.sha}}"
 
   comment2:
     name: sample comment
